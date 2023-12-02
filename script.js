@@ -1,3 +1,17 @@
+class Recipe {
+    constructor(name, img, rating, health, difficulty, time, course, ingredients, steps) {
+        this.name = name;
+        this.img = img;
+        this.rating = rating;
+        this.health = health;
+        this.difficulty = difficulty;
+        this.time = time;
+        this.course = course;
+        this.ingredients = ingredients;
+        this.steps = steps;
+    }
+}
+
 
 
 function displayRecipe() {
@@ -14,21 +28,6 @@ function initBody() {
         displayRecipe();
     }
 }
-
-class Recipe {
-    constructor(name, img, rating, health, difficulty, time, course, ingredients, steps) {
-        this.name = name;
-        this.img = img;
-        this.rating = rating;
-        this.health = health;
-        this.difficulty = difficulty;
-        this.time = time;
-        this.course = course;
-        this.ingredients = ingredients;
-        this.steps = steps;
-    }
-}
-
 
 // function readFiles(dirname, onFileContent, onError) {
 //     const $output = document.getElementById('output')
@@ -50,14 +49,3 @@ class Recipe {
 //         reader.readAsText(file);
 //     };
 
-console.log("here")
-let file = document.getElementById("readfile");
-if (file != null) {
-    file.addEventListener("change", function () {
-        var reader = new FileReader();
-        reader.onload = function (progressEvent) {
-            console.log(this.result);
-        };
-        reader.readAsText(this.files[0]);
-    });
-}
