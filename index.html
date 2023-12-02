@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="script.js"></script>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<html>
 
+<head>
+    <title> Cataloged Cooking </title>
+</head>
+
+<body onLoad="initBody();">
+    <main>
+        <div class="searchBox">
+            <input id="recipe name" type="recipe name" placeholder="Recipe name" />
+            <button id="search" onclick="fileTest();">🔎</button>
+            <button id="sort" onclick="displayRecipe();">Sort</button>
+        </div>
+
+        <div class="grid-container" id="recipe"></div>
+
+
+        <input type="file" name="readfile" id="readfile" />
+
+        <!-- <div class="grid-item" id="recipe">
+
+            </div>
+            <div class="grid-item">
+                <a href="test.html"><img id="WPI" src="images/burger.jpg" width="150" /></a>
+                <p>here</p>
+            </div> -->
+    </main>
+</body>
+
+<script>
+    let file1 = document.getElementById("readfile");
+    if (file1 != null) {
+        file1.addEventListener("change", function () {
+            var reader = new FileReader();
+            reader.onload = function (progressEvent) {
+                console.log(this.result);
+            };
+            reader.readAsText(this.files[0]);
+        });
+    }
+
+</script>
+
+</html>
