@@ -23,6 +23,6 @@ function initBody() {
             currRecipe = element
         }
     });
-    //p.innerHTML = JSON.stringify(currRecipe);
+    p.innerHTML = JSON.stringify(currRecipe);
 }
 
