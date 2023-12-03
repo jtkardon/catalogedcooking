@@ -13,13 +13,17 @@
         <div class="searchBox">
             <input id="recipe name" type="recipe name" placeholder="Recipe name" />
             <button id="search">🔎</button>
-            <button id="sort" onclick="displayRecipe();">Sort</button>
+            <button id="sort">Sort</button>
         </div>
 
-        <div class="grid-container" id="recipe"></div>
+        <div class="grid-container" id="recipe">
+            <a href="test.html" class="grid-item">
+                <img id="Add Recipe" src="images/addbutton.png" width="150" />
+                <p>Add new recipe</p>
+            </a>
+        </div>
 
 
-        <input type="file" name="readfile" id="readfile" />
 
         <!-- <div class="grid-item" id="recipe">
 
@@ -30,31 +34,5 @@
             </div> -->
     </main>
 </body>
-
-<script>
-    // let file1 = document.createElement('file');
-    // file1 = document.getElementById("readfile");
-    // file1.getAttributeNames().forEach((element) => console.log(element));
-    // console.log(file1);
-    // if (file1 != null) {
-    //     var reader = new FileReader();
-    //     reader.onload = function (progressEvent) {
-    //         console.log(this.result);
-    //     };
-    //     reader.readAsText(this.files[0]);
-    // }
-
-    console.log("Example to read line by line text");
-    const f = require('fs');
-    const readline = require('readline');
-    var user_file = './recipe/burger.txt';
-    var r = readline.createInterface({
-        input: f.createReadStream(user_file)
-    });
-    r.on('line', function (text) {
-        console.log(text);
-    });
-
-</script>
 
 </html>
