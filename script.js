@@ -103,6 +103,7 @@ function makeRecipes() {
     recipes.push(salad);
     recipes.push(salad);
     recipes.push(salad);
+    recipes.push(salad);
 }
 
 function initBody() {
