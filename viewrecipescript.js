@@ -12,10 +12,9 @@ class Recipe {
     }
 }
 
-
 function initBody() {
     var currRecipe = new Recipe();
-    var p = document.getElementById('test');
+    console.log(localStorage["recipes"])
     var allRecipes = JSON.parse(localStorage["recipes"]);
 
     allRecipes.forEach(element => {
@@ -23,6 +22,25 @@ function initBody() {
             currRecipe = element
         }
     });
-    p.innerHTML = JSON.stringify(currRecipe);
+    var name = document.getElementById('name');
+    name.innerHTML = currRecipe.name
+    document.getElementById('rating').innerHTML = "Rating: ⭐" + currRecipe.rating;
+    document.getElementById('diff').innerHTML = "Difficulty: " + currRecipe.difficulty;
+    document.getElementById('time').innerHTML = "Cook time: " + currRecipe.time;
+    document.getElementById('health').innerHTML = "Health rating: " + currRecipe.health;
+    document.getElementById('image').setAttribute("src", "images/" + currRecipe.img);
+    var ingr = document.getElementById('ingr');
+    currRecipe.ingredients.forEach(element => {
+        var li = document.createElement("li");
+        li.innerHTML = element;
+        ingr.append(li)
+    })
+    var steps = document.getElementById('steps');
+    currRecipe.steps.forEach(element => {
+        var li = document.createElement("li");
+        li.innerHTML = element;
+        steps.append(li)
+    })
+
 }
 
