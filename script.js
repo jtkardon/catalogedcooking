@@ -31,6 +31,7 @@ function encodeRecipe(recipe) {
 function reset() {
     if (searchValue === "reset") {
         localStorage["recipes"] = [];
+        console.log("RESET")
     } else {
         alert('Searching is not supported for this demo');
     }
