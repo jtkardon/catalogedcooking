@@ -89,7 +89,13 @@ function save() {
     }
     localStorage["currentRecipe"] = recipe.name
     localStorage["recipes"] = JSON.stringify(allRecipes);
-    console.log(recipe)
+}
+
+function del() {
+    alert('Deleting recipe');
+    var allRecipes = JSON.parse(localStorage["recipes"]);
+    allRecipes.splice(index, index);
+    localStorage["recipes"] = JSON.stringify(allRecipes);
 }
 
 function initBody() {
