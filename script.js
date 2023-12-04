@@ -11,6 +11,9 @@ class Recipe {
         this.steps = steps;
     }
 }
+
+var searchValue = "";
+
 function displayRecipe(recipe) {
     var div = document.getElementById('recipe');
     var a = document.createElement('a');
@@ -25,7 +28,13 @@ function encodeRecipe(recipe) {
     localStorage["currentRecipe"] = recipe;
 }
 
-
+function reset() {
+    if (searchValue === "reset") {
+        localStorage["recipes"] = [];
+    } else {
+        alert('Searching is not supported for this demo');
+    }
+}
 
 
 function makeRecipes() {
@@ -117,4 +126,9 @@ function initBody() {
     for (let i = 0; i < recipes.length; i++) {
         displayRecipe(recipes[i])
     }
+
+    let name = document.getElementById('recipe name');
+    name.addEventListener('input', (event) => {
+        searchValue = event.target.value;
+    })
 }
