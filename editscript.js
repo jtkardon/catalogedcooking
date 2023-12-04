@@ -74,6 +74,8 @@ function minusStep() {
 }
 
 function test() {
+    recipe.ingredients = ingredients
+    recipe.steps = steps
     console.log(recipe)
 }
 
