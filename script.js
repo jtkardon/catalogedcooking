@@ -104,7 +104,7 @@ function makeRecipes() {
 
 function initBody() {
     localStorage["currentRecipe"] = ""
-    //localStorage["recipes"] = [];
+    // localStorage["recipes"] = [];
     recipes = makeRecipes()
     var addRecipes = JSON.parse(localStorage["recipes"] || "[]");
     if (addRecipes.length == 0) {

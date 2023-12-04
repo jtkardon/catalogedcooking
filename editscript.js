@@ -87,6 +87,7 @@ function save() {
     } else {
         allRecipes[index] = recipe;
     }
+    localStorage["currentRecipe"] = recipe.name
     localStorage["recipes"] = JSON.stringify(allRecipes);
     console.log(recipe)
 }
