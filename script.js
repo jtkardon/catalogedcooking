@@ -26,10 +26,10 @@ function encodeRecipe(recipe) {
 }
 
 
-recipes = [];
+
 
 function makeRecipes() {
-
+    recipes = [];
     const burgerIngr = [
         "1/4 cup mayonnaise",
         "1 tbps dijon mustard",
@@ -99,14 +99,22 @@ function makeRecipes() {
         "Melt the semisweet chocolate chips, semisweet chocolate squares, and the shortening in the top half of a double boiler. Use a fork to dip the balls into the melted chocolate, and place on wax paper to cool until set."]
     var chocholate = new Recipe("Chocolate Balls", "chocolate.JPG", 1, 1, 3, "35 mins", "Dessert", chocolateIngr, chocolateSteps)
     recipes.push(chocholate)
-
+    return recipes;
 }
 
 function initBody() {
     localStorage["currentRecipe"] = ""
-    makeRecipes()
+    //localStorage["recipes"] = [];
+    recipes = makeRecipes()
+    var addRecipes = JSON.parse(localStorage["recipes"] || "[]");
+    if (addRecipes.length == 0) {
+        for (let i = 0; i < recipes.length; i++) {
+            addRecipes.push(recipes[i]);
+        }
+    }
+    localStorage["recipes"] = JSON.stringify(addRecipes);
+    recipes = JSON.parse(localStorage["recipes"])
     for (let i = 0; i < recipes.length; i++) {
         displayRecipe(recipes[i])
     }
-    localStorage["recipes"] = JSON.stringify(recipes);
 }

@@ -17,8 +17,7 @@ var ingredients = [];
 var steps = [];
 var ingrID = 0;
 var stepID = 0;
-var baseName;
-var index;
+
 function addIngr() {
     var ul = document.getElementById('ingr');
     var input = document.createElement('input');
@@ -44,7 +43,6 @@ function minusIngr() {
         ul.removeChild(inputs[inputs.length - 1])
     }
     ingrID--;
-    ingredients.pop();
 }
 
 function addStep() {
@@ -75,54 +73,21 @@ function minusStep() {
         ul.removeChild(inputs[inputs.length - 1])
     }
     stepID--;
-    steps.pop()
 }
 
 function save() {
     recipe.ingredients = ingredients
     recipe.steps = steps
     var allRecipes = JSON.parse(localStorage["recipes"]);
-    if (!(baseName === recipe.name)) {
-        allRecipes.push(recipe);
-    } else {
-        allRecipes[index] = recipe;
-    }
+    allRecipes.push(recipe);
     localStorage["recipes"] = JSON.stringify(allRecipes);
-    console.log(recipe)
+    console.log(localStorage["recipes"])
 }
 
 function initBody() {
-    var currRecipe = new Recipe();
-    var allRecipes = JSON.parse(localStorage["recipes"]);
 
-    var i = 0;
-    allRecipes.forEach(element => {
-        if (element.name === localStorage["currentRecipe"]) {
-            currRecipe = element;
-            index = i;
-        }
-        i++;
-    });
-
-    document.getElementById('rname').setAttribute("value", currRecipe.name);
-    document.getElementById('rating').setAttribute("value", currRecipe.rating);
-    document.getElementById('diff').setAttribute("value", currRecipe.difficulty);
-    document.getElementById('time').setAttribute("value", currRecipe.time);
-    document.getElementById('health').setAttribute("value", currRecipe.health);
-    document.getElementById('image').setAttribute("src", "images/" + currRecipe.img);
-
-    ingredients = currRecipe.ingredients;
-    for (let i = 0; i < ingredients.length; i++) {
-        addIngr();
-        document.getElementById(i + 'i').setAttribute("value", ingredients[i]);
-    }
-    steps = currRecipe.steps;
-    for (let i = 0; i < steps.length; i++) {
-        addStep();
-        document.getElementById(i).setAttribute("value", steps[i]);
-    }
-    recipe = currRecipe
-    baseName = currRecipe.name;
+    addIngr();
+    addStep();
 
     let name = document.getElementById('rname');
     name.addEventListener('input', (event) => {

@@ -14,7 +14,6 @@ class Recipe {
 
 function initBody() {
     var currRecipe = new Recipe();
-    console.log(localStorage["recipes"])
     var allRecipes = JSON.parse(localStorage["recipes"]);
 
     allRecipes.forEach(element => {
