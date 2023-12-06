@@ -25,6 +25,7 @@ function addIngr() {
     input.setAttribute("class", "ingredients");
     input.setAttribute("name", "ingredient");
     input.setAttribute("id", ingrID + "i");
+    input.setAttribute("class", "iList");
     ul.append(input);
 
     let name = document.getElementById(ingrID + "i");
@@ -47,13 +48,14 @@ function minusIngr() {
 
 function addStep() {
     var ol = document.getElementById('step');
-    var input = document.createElement('input');
+    var input = document.createElement('textarea');
     var li = document.createElement('li');
     //input.setAttribute("placeholder", "Step");
     input.setAttribute("class", "stepsI");
     input.setAttribute("name", "step");
     li.setAttribute("class", "stepsLI")
     input.setAttribute("id", stepID);
+    input.setAttribute("class", "sList");
     li.append(input);
     ol.append(li);
 
