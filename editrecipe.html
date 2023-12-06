@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="editscript.js"></script>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<html>
+
+<head>
+    <title> Viewing Recipe </title>
+</head>
+
+<body onload="initBody();">
+    <main>
+        <a href="index.html"><button id="Home" href>Home</button></a>
+        <a href="viewrecipe.html"><button id="Cancel" href>Cancel</button></a>
+        <a href="viewrecipe.html"><button id="Save" onclick="save();">Save</button></a>
+        <a href="index.html"><button id="Delete" onclick="del();">Delete</button></a>
+        <!-- <button id="Save" onclick="save();">Save</button> -->
+
+        <div class="grid-container">
+            <form>
+                <label for="rname">Recipe Name:</label><br>
+                <input id="rname" name="rname" required></input><br>
+
+                <label for="rating">Rating:</label><br>
+                <input id="rating" name="rating" required></input><br>
+
+                <label for="diff">Difficulty:</label><br>
+                <input id="diff" name="diff" required></input><br>
+
+                <label for="time">Cook Time:</label><br>
+                <input id="time" name="time" required></input><br>
+
+                <label for="health">Health Rating:</label><br>
+                <input id="health" name="health" required></input>
+            </form>
+            <div onclick="alert('Changing pictures not supported for this demo')">
+                <label for="image">Image:</label><br>
+                <img id="image" src="images/addbutton.png" width="150" />
+            </div>
+        </div>
+
+        <h3>Ingredients:</h3>
+        <form>
+            <ul id="ingr"></ul>
+        </form>
+        <button id="addIngr" class="plus" onclick="addIngr()">+</button>
+        <button id="minusIngr" class="minus" onclick="minusIngr()">-</button>
+
+        <h3>Steps:</h3>
+        <form>
+            <ol id="step"></ol>
+        </form>
+        <button id="addStep" class="plus" onclick="addStep()">+</button>
+        <button id="minusStep" class="minus" onclick="minusStep()">-</button>
+
+
+    </main>
+</body>
+
+</html>

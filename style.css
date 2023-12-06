@@ -1,0 +1,120 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(220, 220, 220, 0.8);
+    border: 1px solid rgba(217, 217, 217, 0.8);
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+body {
+    background-color: #fff2cc;
+    font-family: Futura, Trebuchet MS;
+}
+
+input {
+    padding: 5px;
+}
+
+textarea {
+    padding: 5px;
+}
+
+.searchBar {
+    padding: 0;
+}
+
+.searchBox {
+    padding: 0;
+    margin: 0 12px;
+    display: grid;
+    grid-template-columns: 70% auto auto;
+}
+
+.viewrecipe {
+    padding-left: 10px;
+}
+
+button {
+    /*center the button*/
+    /* add your code to set top and bottom margins */
+    margin: 1px;
+    border-color: black;
+
+
+    /*add an image to your button*/
+    -webkit-border-image: url("greyButton.png") 14 14 14 14 stretch;
+    border-image: url("greyButton.png") 14 14 14 14 stretch;
+    background-size: cover;
+
+}
+
+h1 {
+    /* padding-left: 10px; */
+    margin-bottom: 0;
+}
+
+.stats {
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.viewimg {
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+.iList {
+    margin-bottom: 5px;
+}
+
+.sList {
+    margin-bottom: 5px;
+}
+
+
+
+button.searchBox {
+    /*center the button*/
+    display: block;
+    /* add your code to set top and bottom margins */
+    margin: 5px;
+    margin-left: 10px;
+    border-color: black;
+
+
+    /*add an image to your button*/
+    -webkit-border-image: url("greyButton.png") 14 14 14 14 stretch;
+    border-image: url("greyButton.png") 14 14 14 14 stretch;
+    background-size: cover;
+
+    width: 80%;
+}
+
+.step {
+    margin-bottom: 25px;
+}
+
+.ingredient {
+    margin-bottom: 2px;
+}
+
+.plus {
+    margin-left: 40px;
+}

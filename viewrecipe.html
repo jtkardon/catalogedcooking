@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="viewrecipescript.js"></script>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<html>
+
+<head>
+    <title> Viewing Recipe </title>
+</head>
+
+<body onLoad="initBody();">
+    <main>
+        <a href="index.html"><button id="Home" href>Home</button></a>
+        <a href="editrecipe.html"><button id="Edit" href>Edit</button></a>
+        <button id="Substitutions" onclick="alert('Substitutions are not supported for this demo')"
+            href>Substitutions</button>
+        <button id="Portion" onclick="alert('Portion changes are not supported for this demo')" href>Serves 1</button>
+        <div class="viewrecipe">
+            <h1 id="name"></h1>
+            <div class="grid-container">
+                <div class="stats">
+                    <p id="rating">⭐</p>
+                    <p id="diff"></p>
+                    <p id="time"></p>
+                    <p id="health"></p>
+                </div>
+                <div class="viewimg">
+                    <img id="image" src="images/addbutton.png" width="150" />
+                </div>
+            </div>
+
+            <h3>Ingredients:</h3>
+            <ul id="ingr"></ul>
+
+            <h3>Steps:</h3>
+            <ol id="steps"></ol>
+        </div>
+
+    </main>
+</body>
+
+
+</html>

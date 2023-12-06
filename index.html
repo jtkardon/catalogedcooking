@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="script.js"></script>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<html>
 
+<head>
+    <title> Cataloged Cooking </title>
+</head>
+
+<body onLoad="initBody();">
+    <main>
+        <div class="searchBox">
+            <input id="recipe name" class="searchBar" type="recipe name" placeholder="Recipe name" />
+            <button id="search" class="search" onclick="reset();">🔎</button>
+            <button id="sort" class="search" onclick="alert('Sorting is not supported for this demo');">Sort</button>
+        </div>
+
+        <div class="grid-container" id="recipe">
+            <a href="addrecipe.html" class="grid-item">
+                <img id="Add Recipe" src="images/addbutton.png" width="150" />
+                <p>Add new recipe</p>
+            </a>
+        </div>
+
+
+
+        <!-- <div class="grid-item" id="recipe">
+
+            </div>
+            <div class="grid-item">
+                <a href="test.html"><img id="WPI" src="images/burger.jpg" width="150" /></a>
+                <p>here</p>
+            </div> -->
+    </main>
+</body>
+
+</html>
