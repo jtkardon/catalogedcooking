@@ -33,6 +33,7 @@ textarea {
 
 .searchBox {
     padding: 0;
+    margin: 0 12px;
     display: grid;
     grid-template-columns: 70% auto auto;
 }
